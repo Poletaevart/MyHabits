@@ -20,7 +20,8 @@ class HabitsViewController: UIViewController {
     
     @objc func newHabit() {
         let habitsViewController = HabitsViewController()
-            self.navigationController?.pushViewController(habitsViewController, animated: true)
-      
+    //    newHabitVC.myTitle = "Создать"
+        self.navigationController?.pushViewController(habitsViewController, animated: true)
+       // newHabitVC.updatingDelegate = self
     }
 }
