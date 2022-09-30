@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class HabitsViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -19,9 +20,8 @@ class HabitsViewController: UIViewController {
     }
     
     @objc func newHabit() {
-        let habitsViewController = HabitsViewController()
-    //    newHabitVC.myTitle = "Создать"
-        self.navigationController?.pushViewController(habitsViewController, animated: true)
-       // newHabitVC.updatingDelegate = self
-    }
+        let  habitViewController =  HabitViewController()
+        habitViewController.myTitle = "Создать"
+        self.navigationController?.pushViewController(habitViewController, animated: true)    }
+    
 }

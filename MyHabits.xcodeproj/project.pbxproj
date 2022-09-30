@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C44E3A728E4AF0600CEBCF2 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C44E3A628E4AF0600CEBCF2 /* HabitViewController.swift */; };
 		5CEE0B6428D9C04400349707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE0B6328D9C04400349707 /* AppDelegate.swift */; };
 		5CEE0B6628D9C04400349707 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE0B6528D9C04400349707 /* SceneDelegate.swift */; };
 		5CEE0B6D28D9C04400349707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CEE0B6C28D9C04400349707 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C44E3A628E4AF0600CEBCF2 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 		5CEE0B6028D9C04400349707 /* MyHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEE0B6328D9C04400349707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CEE0B6528D9C04400349707 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				5CEE0B6528D9C04400349707 /* SceneDelegate.swift */,
 				5CEE0B7728DA243900349707 /* HabitsStore.swift */,
 				5CEE0B7928DA26D300349707 /* HabitsViewController.swift */,
+				5C44E3A628E4AF0600CEBCF2 /* HabitViewController.swift */,
 				5CEE0B7B28DA26E100349707 /* InfoViewController.swift */,
 				5CEE0B6C28D9C04400349707 /* Assets.xcassets */,
 				5CEE0B6E28D9C04400349707 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CEE0B7828DA243900349707 /* HabitsStore.swift in Sources */,
+				5C44E3A728E4AF0600CEBCF2 /* HabitViewController.swift in Sources */,
 				5CEE0B6428D9C04400349707 /* AppDelegate.swift in Sources */,
 				5CEE0B7A28DA26D300349707 /* HabitsViewController.swift in Sources */,
 				5CEE0B7C28DA26E100349707 /* InfoViewController.swift in Sources */,
