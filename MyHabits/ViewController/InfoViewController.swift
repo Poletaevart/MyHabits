@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController{
+class InfoViewController: UIViewController {
     let myTitle = "Информация"
     
     private lazy var scrollView: UIScrollView = {
@@ -23,7 +23,7 @@ class InfoViewController: UIViewController{
         return contenierView
     }()
     
-    private let titleLabel: UILabel = {
+    private let textTitle: UILabel = {
         let textTitle = UILabel()
         textTitle.text = "Привычка за 21 день"
         textTitle.textColor = .black
@@ -31,7 +31,7 @@ class InfoViewController: UIViewController{
         textTitle.numberOfLines = 1
         return textTitle
     }()
-    private let headerLabel: UILabel = {
+    private let textHeader: UILabel = {
         let textHeader = UILabel()
         textHeader.textColor = .black
         textHeader.text = "Прохождение этапов, за которые за 21 день вырабатывается привычка, подчиняется следующему алгоритму:"
@@ -39,7 +39,7 @@ class InfoViewController: UIViewController{
         return textHeader
     }()
     
-    private let labelParagraphOne: UILabel = {
+    private let textPartOne: UILabel = {
         let textPartOne = UILabel()
         textPartOne.textColor = .black
         textPartOne.text = "1. Провести 1 день без обращения к старым привычкам, стараться вести себя так, как будто цель, загаданная в перспективу, находится на расстоянии шага."
@@ -47,7 +47,7 @@ class InfoViewController: UIViewController{
         return textPartOne
     }()
     
-    private let labelParagraphTwo: UILabel = {
+    private let textPartTwo: UILabel = {
         let textPartTwo = UILabel()
         textPartTwo.textColor = .black
         textPartTwo.text = "2. Выдержать 2 дня в прежнем состоянии самоконтроля."
@@ -55,7 +55,7 @@ class InfoViewController: UIViewController{
         return textPartTwo
     }()
     
-    private let labelParagraphThree: UILabel = {
+    private let textPartThree: UILabel = {
         let textPartThree = UILabel()
         textPartThree.textColor = .black
         textPartThree.text = "3. Отметить в дневнике первую неделю изменений и подвести первые итоги — что оказалось тяжело, что — легче, с чем еще предстоит серьезно бороться."
@@ -63,7 +63,7 @@ class InfoViewController: UIViewController{
         return textPartThree
     }()
     
-    private let labelParagraphFour: UILabel = {
+    private let textPartFour: UILabel = {
         let textPartFour = UILabel()
         textPartFour.textColor = .black
         textPartFour.text = "4. Поздравить себя с прохождением первого серьезного порога в 21 день. За это время отказ от дурных наклонностей уже примет форму осознанного преодоления и человек сможет больше работать в сторону принятия положительных качеств."
@@ -71,7 +71,7 @@ class InfoViewController: UIViewController{
         return textPartFour
     }()
     
-    private let labelParagraphFive: UILabel = {
+    private let textPartFive: UILabel = {
         let textPartFive = UILabel()
         textPartFive.textColor = .black
         textPartFive.text = "5. Держать планку 40 дней. Практикующий методику уже чувствует себя освободившимся от прошлого негатива и двигается в нужном направлении с хорошей динамикой."
@@ -79,7 +79,7 @@ class InfoViewController: UIViewController{
         return textPartFive
     }()
     
-    private let labelParagraphSix: UILabel = {
+    private let textPartSix: UILabel = {
         let textPartSix = UILabel()
         textPartSix.textColor = .black
         textPartSix.text = "6. На 90-й день соблюдения техники все лишнее из «прошлой жизни» перестает напоминать о себе, и человек, оглянувшись назад, осознает себя полностью обновившимся."
@@ -87,7 +87,8 @@ class InfoViewController: UIViewController{
         return textPartSix
     }()
     
-    private let sourceLabel: UILabel = {
+    // Info text footer
+    private let footNote: UILabel = {
         let footNote = UILabel()
         footNote.textColor = .black
         footNote.text = "Источник: psychbook.ru"
@@ -106,15 +107,15 @@ class InfoViewController: UIViewController{
         view.addSubview(scrollView)
         scrollView.addSubview(contenierView)
         contenierView.addSubviews(
-            titleLabel,
-            headerLabel,
-            labelParagraphOne,
-            labelParagraphTwo,
-            labelParagraphThree,
-            labelParagraphFour,
-            labelParagraphFive,
-            labelParagraphSix,
-            sourceLabel
+            textTitle,
+            textHeader,
+            textPartOne,
+            textPartTwo,
+            textPartThree,
+            textPartFour,
+            textPartFive,
+            textPartSix,
+            footNote
         )
         
         NSLayoutConstraint.activate([
@@ -129,42 +130,42 @@ class InfoViewController: UIViewController{
             contenierView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             contenierView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: contenierView.topAnchor, constant: 22),
-            titleLabel.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textTitle.topAnchor.constraint(equalTo: contenierView.topAnchor, constant: 22),
+            textTitle.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textTitle.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            headerLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            headerLabel.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            headerLabel.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textHeader.topAnchor.constraint(equalTo: textTitle.bottomAnchor, constant: 15),
+            textHeader.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textHeader.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            labelParagraphOne.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 10),
-            labelParagraphOne.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            labelParagraphOne.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textPartOne.topAnchor.constraint(equalTo: textHeader.bottomAnchor, constant: 10),
+            textPartOne.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textPartOne.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            labelParagraphTwo.topAnchor.constraint(equalTo: labelParagraphOne.bottomAnchor, constant: 10),
-            labelParagraphTwo.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            labelParagraphTwo.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textPartTwo.topAnchor.constraint(equalTo: textPartOne.bottomAnchor, constant: 10),
+            textPartTwo.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textPartTwo.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            labelParagraphThree.topAnchor.constraint(equalTo: labelParagraphTwo.bottomAnchor, constant: 10),
-            labelParagraphThree.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            labelParagraphThree.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textPartThree.topAnchor.constraint(equalTo: textPartTwo.bottomAnchor, constant: 10),
+            textPartThree.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textPartThree.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            labelParagraphFour.topAnchor.constraint(equalTo: labelParagraphThree.bottomAnchor, constant: 10),
-            labelParagraphFour.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            labelParagraphFour.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textPartFour.topAnchor.constraint(equalTo: textPartThree.bottomAnchor, constant: 10),
+            textPartFour.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textPartFour.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            labelParagraphFive.topAnchor.constraint(equalTo: labelParagraphFour.bottomAnchor, constant: 10),
-            labelParagraphFive.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            labelParagraphFive.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textPartFive.topAnchor.constraint(equalTo: textPartFour.bottomAnchor, constant: 10),
+            textPartFive.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textPartFive.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            labelParagraphSix.topAnchor.constraint(equalTo: labelParagraphFive.bottomAnchor, constant: 10),
-            labelParagraphSix.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            labelParagraphSix.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            textPartSix.topAnchor.constraint(equalTo: textPartFive.bottomAnchor, constant: 10),
+            textPartSix.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            textPartSix.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
             
-            sourceLabel.topAnchor.constraint(equalTo: labelParagraphSix.bottomAnchor, constant: 15),
-            sourceLabel.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
-            sourceLabel.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
-            sourceLabel.bottomAnchor.constraint(equalTo: contenierView.bottomAnchor, constant: -15)
+            footNote.topAnchor.constraint(equalTo: textPartSix.bottomAnchor, constant: 15),
+            footNote.leadingAnchor.constraint(equalTo: contenierView.leadingAnchor, constant: 10),
+            footNote.trailingAnchor.constraint(equalTo: contenierView.trailingAnchor, constant: -10),
+            footNote.bottomAnchor.constraint(equalTo: contenierView.bottomAnchor, constant: -15)
         ])
         
     }
@@ -172,7 +173,7 @@ class InfoViewController: UIViewController{
 }
 
 extension UIView {
-
+    
     func addSubviews(_ views: UIView...) {
         views.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -180,4 +181,3 @@ extension UIView {
         }
     }
 }
-
